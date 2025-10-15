@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Empleado</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        form { max-width: 400px; }
+        label { display: block; margin: 10px 0 5px; }
+        input { width: 100%; padding: 8px; margin-bottom: 10px; }
+        button { background-color: #007BFF; color: white; padding: 10px 15px; border: none; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <h1>Agregar Empleado</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required>
+
+        <label>Apellidos:</label>
+        <input type="text" name="apellidos" required>
+
+        <label>Edad:</label>
+        <input type="number" name="edad" min="18" required>
+
+        <label>Correo Electrónico:</label>
+        <input type="email" name="correo" required>
+
+        <label>Número de Teléfono:</label>
+        <input type="text" name="numero_telefono" maxlength="15" required>
+
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="/">Volver al listado</a>
+</body>
+</html>

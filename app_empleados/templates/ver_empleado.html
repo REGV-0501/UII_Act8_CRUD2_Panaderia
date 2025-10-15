@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del Empleado</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        p { margin-bottom: 10px; }
+        .label { font-weight: bold; margin-right: 5px; }
+        a { display: inline-block; margin-top: 20px; padding: 10px 15px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 4px; }
+        a:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <h1>Detalle del Empleado</h1>
+    <p><span class="label">Nombre:</span> {{ empleado.nombre }}</p>
+    <p><span class="label">Apellidos:</span> {{ empleado.apellidos }}</p>
+    <p><span class="label">Edad:</span> {{ empleado.edad }}</p>
+    <p><span class="label">Correo:</span> {{ empleado.correo }}</p>
+    <p><span class="label">Teléfono:</span> {{ empleado.numero_telefono }}</p>
+    <a href="/">Volver al listado</a>
+</body>
+</html>
